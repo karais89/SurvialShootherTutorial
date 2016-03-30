@@ -13,8 +13,9 @@ public class PlayerMovement : MonoBehaviour
     // 스크립트의 활성 여부와 상관없이 호출
     void Awake()
     {
-        
+        // LayerMask.GetMask("")  =  1 << (LayerMask.NameToLayer(""))
         floorMask = LayerMask.GetMask("Floor");
+
         anim = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody>();
     }
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.Set(h, 0, v);
 
+        // 벡터 정규화 후 이동 거리 계산
         movement = movement.normalized * speed * Time.deltaTime;
 
         playerRigidbody.MovePosition(transform.position + movement);
@@ -51,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
             playerToMouse.y = 0f;
 
             Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
-            playerRigidbody.MoveRotation(newRotation);
+            playerRigidbody.MoveRotation(newRotation);            
         }
     }
 
