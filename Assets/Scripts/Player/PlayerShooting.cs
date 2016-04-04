@@ -61,10 +61,11 @@ public class PlayerShooting : MonoBehaviour
 
         gunParticles.Stop ();
         gunParticles.Play ();
-
+        
         gunLine.enabled = true;
-        gunLine.SetPosition (0, transform.position);
+        gunLine.SetPosition (0, transform.position); // 라인의 첫 지점(총신)
 
+        // ray 설정
         shootRay.origin = transform.position;
         shootRay.direction = transform.forward;
 
@@ -75,11 +76,12 @@ public class PlayerShooting : MonoBehaviour
             {
                 enemyHealth.TakeDamage (damagePerShot, shootHit.point);
             }
-            gunLine.SetPosition (1, shootHit.point);
+            gunLine.SetPosition (1, shootHit.point); // 두번째 점
         }
         else
         {
-            gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range);
+            // 어떤것을 맞추지 못하면.
+            gunLine.SetPosition (1, shootRay.origin + shootRay.direction * range); // 두번째 점.
         }
     }
 }

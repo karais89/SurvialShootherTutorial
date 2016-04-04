@@ -4,7 +4,7 @@ public class EnemyHealth : MonoBehaviour
 {
     public int startingHealth = 100;
     public int currentHealth;
-    public float sinkSpeed = 2.5f;
+    public float sinkSpeed = 2.5f; // 적들이 서서히 사라지게 가라앉음.
     public int scoreValue = 10;
     public AudioClip deathClip;
 

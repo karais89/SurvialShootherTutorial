@@ -290,7 +290,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 409160, guid: ad67cddd729fb4342be2063a3f5ad7cc, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad67cddd729fb4342be2063a3f5ad7cc, type: 2}
@@ -334,31 +334,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11415330, guid: b21da3a50389f0f48a9ba6fb8bf799f3, type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1140068845}
+    - target: {fileID: 11415330, guid: b21da3a50389f0f48a9ba6fb8bf799f3, type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 1759093665}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b21da3a50389f0f48a9ba6fb8bf799f3, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &492099188 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 147974, guid: b21da3a50389f0f48a9ba6fb8bf799f3, type: 2}
-  m_PrefabInternal: {fileID: 492099187}
---- !u!114 &492099189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 492099188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 1140068845}
-  damageImage: {fileID: 1759093665}
-  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!4 &492099194 stripped
 Transform:
   m_PrefabParentObject: {fileID: 491060, guid: b21da3a50389f0f48a9ba6fb8bf799f3, type: 2}
@@ -1243,6 +1229,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.5
   attackDamage: 10
+--- !u!114 &1814754359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1814754350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b9d14572410594cb85d40eedfb150c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  deathClip: {fileID: 8300000, guid: 1d3bfb9269f136947bf8ac164cace1ff, type: 3}
 --- !u!1 &1919340146
 GameObject:
   m_ObjectHideFlags: 0
