@@ -19,6 +19,7 @@ public class ScoreManager : MonoBehaviour
 
     void Update ()
     {
+        // GC???
         text.text = "Score: " + score;
     }
 }
